@@ -758,7 +758,6 @@ if ($boton=="Agregar archivo")
 				{
 					if ($canttipos==0)
 					{
-						$a="select * from tiposaagregar where Desctipo='$tipo'";
 						$l=mysqli_query($con,$a) or die ("error insertando ".$a);
 						$ctip=mysqli_num_rows($l);
 						if ($ctip!=0)
@@ -766,7 +765,6 @@ if ($boton=="Agregar archivo")
 							//Si no existe el tipo archivo lo agrega en la lista de archivos a agregar
 							$a="insert into tiposaagregar(Desctipo,Fecha,Usuario) values ('$tipo','$fechaagre',$idusuario)";
 							$l=mysqli_query($con,$a) or die ("error insertando ".$a);
-						}
 					
 					$Men='<p style="text-align:center; color:#F00">Este tipo de archivos no esta soportado actualmente. No te preocupes en la brevedad sera implementada una mejora</p>';
 					?>
