@@ -726,13 +726,6 @@ if ($boton=="Agregar archivo")
 	$ba=mysqli_query($con,$ab) or die ("error insertando ".$ab);
 	$canttipos=mysqli_num_rows($ba);
 	$mtipos=mysqli_fetch_array($ba);
-	?>
-					 <script type="text/javascript">
-					 $(document).ready(function(e) {
-						 	alert('El tipo de archivo es <? echo $tipo;?>');
-						});
-					 </script> 
-					 <?
 	$ab="select * from archivos ORDER BY idarchivo DESC";
 	$ba=mysqli_query($con,$ab) or die ("error insertando ".$ab);
 	$mfiles=mysqli_fetch_array($ba);
