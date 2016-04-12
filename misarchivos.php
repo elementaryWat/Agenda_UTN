@@ -60,19 +60,33 @@ if ($_SESSION['Directorio']==0 || $_SESSION['Directorio']=="")
 $directorio=$_SESSION['Directorio'];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"><ul></ul>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no"/>
+<link rel="stylesheet"  href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" /> 
 <title>Agenda UTN</title>
-<meta charset="utf-8" />
- <meta name="viewport" content="width=device-width,user-scalable=no"/>
-   <link rel="stylesheet" href="themes/utniano.min.css" />
+<link rel="stylesheet"  href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" /> 
+	<link rel="stylesheet" href="calendario/jquery.mobile.datepicker.css" />
+	<link rel="stylesheet" href="calendario/jquery.mobile.datepicker.theme.css" />
+    <link rel="stylesheet" href="themes/utniano.min.css" />
 <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
-  <script src="js/jquery.mobile-1.4.5.js"></script> 
-  <script src="js/eventosextra/src/jquery.mobile-events.js"></script> 
-  <link rel="stylesheet"  href="js/packiconos/dist/jqm-icon-pack-fa.css" />
-<script type="text/javascript">
+<!--  Seccion calendario-->
+	<!-- Core CSS File. The CSS code needed to make eventCalendar works -->
+	<link rel="stylesheet" href="css/eventCalendar.css">
+
+	<!-- Theme CSS file: it makes eventCalendar nicer -->
+	<link rel="stylesheet" href="css/eventCalendar_theme_responsive.css">
+<!--Fin seccion calendario-->
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="calendario/external/jquery-ui/datepicker.js"></script>
+	<script src="calendario/jquery.mobile.datepicker.js"></script>
+    <script language="javascript" type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js"> </script>
+     <link rel="stylesheet"  href="js/packiconos/dist/jqm-icon-pack-fa.css" />
+    <script>
 
 /*Prototipo indexOf*/
 if (!Array.prototype.indexOf) {
