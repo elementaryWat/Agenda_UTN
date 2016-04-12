@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no"/>
+<title>Agenda UTN</title>
+<link rel="stylesheet" href="themes/utniano.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<? 
+	mysql_connect("mysql.hostinger.com.ar","u800145578_root","literatura18");
+	mysql_select_db("u800145578_liter") or die ("No se ha podido encontrar la base de datos");
+	//Libros
+	$a="select * from publicaciones where Tipo=1 ORDER BY Nombre ASC";
+	$b=mysql_query($a) or die ("error buscando ".$a);
+	//Revistas y folletos
+	$c="select * from publicaciones where Tipo=2 ORDER BY Nombre ASC";
+	$d=mysql_query($c) or die ("error buscando ".$c);
+?>
+<body>
+<div data-role="page" id="paginai" data-fullscreen="true">
+    	<div data-role="header" data-position="fixed">
+                        
+    	</div>
+        <div data-role="header" data-position="fixed" data-theme="a">
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="agregarpedido.php" data-role="button" data-icon="plus" data-rel="external" data-ajax="false">Agregar pedido</a>  
+            <a href="#dialogo" data-role="button" data-icon="gear" data-iconpos="notext" data-rel="dialog">Configuraciones</a> 
+         </div>
+    	</div>
+        
+        <div data-role="content" id="contenidolib">
+        
+    	</div>
+        <div data-role="footer" data-position="fixed" data-theme="a">
+        <table width="100%" border="0">
+          <tr>
+          
+              <select name="Rango" data-native-menu="false" onchange="pedir()"> 
+                <option value="Todos">Todos</option>
+                  <option value="No Disponibles">No Disponibles</option>
+                  <option value="Disponibles">Disponibles</option>
+          		</select> </td>
+            <td><select name="Criterio" onchange="pedir()" data-native-menu="false"> 
+                  <option value="Por Nombre Ascendente">Por Nombre Ascendente</option>
+                  <option value="Por Nombre Descendente">Por Nombre Descendente</option>
+                  <option value="Por Cantidad Ascendente">Por Cantidad Ascendente</option>
+                  <option value="Por Cantidad Descendente">Por Cantidad Descendente</option>
+          		</select> </td>
+          </tr>
+        </table>
+    	</div>
+    </div>
+</body>
+</html>

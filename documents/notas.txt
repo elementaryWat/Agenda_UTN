@@ -1,0 +1,27 @@
+Notas para mejorar la aplicacion
+Mejorar la muestra de examenes que tienen un rango de tiempo
+Mejorar el registro de un usuario para que pueda elegir las materias que estas cursando
+
+
+Implementar una nube para el almacenamiento de archivos personales
+Estos archivos podran ser compartidos opcionalmente al agregar un enlace
+de este archivo en la tarea para de esta forma contar con mas detalles 
+a la hora de realizar la misma
+
+Agregar opciones para insertar link a paginas web que serviran como
+recurso de ayuda a la hora de realizar la actividad
+
+Agregar opciones de edicion de cuenta para personalizar de forma sencilla
+las materias de cursado por ejemplo
+
+Mejorar el textareaa de edicion de detalles de la tarea
+
+Modificar el algoritmo de calculo de fechas para usarlo en las notificaciones
+
+Agregar la opcion para agregar comentarios a la tarea
+
+
+1 er parcial 1
+
+2015-06-22
+2015-06-26

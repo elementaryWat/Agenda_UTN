@@ -1,0 +1,14 @@
+Analisis matematico I (ISI, IEM, IQ) Anali. Mat. I
+Algebra y Geometria Analitica (ISI, IEM, IQ) Alg. y Geom. Anali.
+Sistemas de Representacion (ISI, IEM, IQ) Sist. de Repr.
+Fisica I (ISI, IEM, IQ) Fisica I
+Analisis Matematico II (ISI, IEM, IQ) Anali. Matem. II
+Fisica II (ISI, IEM, IQ) Fisica II
+Probabilidad y Estadistica (ISI, IEM, IQ) Probab. y Estad.
+Ingenieria y Sociedad (ISI, IEM, IQ) Ing. y Socie.
+Economia (ISI, IEM, IQ) Economia
+Legislacion (ISI, IEM, IQ) Legislacion
+Ingles I (ISI, IEM, IQ) Ingles I
+Ingles II (ISI, IEM, IQ) Ingles II
+
+

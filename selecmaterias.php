@@ -1,0 +1,6 @@
+<?
+header ("Location:modificacionmaterias.php");
+?>
+
+
+	

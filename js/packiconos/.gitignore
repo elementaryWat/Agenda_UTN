@@ -1,0 +1,8 @@
+*~
+.livereload
+.DS_Store
+.bundle
+Gemfile.lock
+*.pyc
+source/SVG_BAK
+icons.cfm
