@@ -831,7 +831,7 @@ if ($boton=="Agregar archivo")
 		<div data-role="panel" id="mypanel" data-position-fixed="true" data-display="push" data-theme="b">
         <div class="ui-grid-a" style="background-color:#12abf8; border-radius:30%">
           <div class="ui-block-a" style="vertical-align:middle" align="center"><h3><? echo $usuario;?></h3></div>
-          <div class="ui-block-b" style="vertical-align:middle" align="right" ><img src="imagenes/Fotosperfil/<? echo $fp;?>" width="100%" alt=""/></div>
+          <div class="ui-block-b" style="vertical-align:middle" align="right" ><img src="archivosusuarios/Fotosperfil/<? echo $fp;?>" width="100%" alt=""/></div>
         </div>
         <a href="index.php" data-role="button" data-icon="calendar-o" data-ajax="false">Mis tareas</a>
         <a href="#" data-role="button" data-icon="folder" class="ui-btn-active">Mis archivos</a>
