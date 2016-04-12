@@ -1693,7 +1693,11 @@ function agregarcom(idtarea,idusuario)
     	</div>
     </div>
     <div data-role="page" id="dialogootarea" class="ui-dialog">
-    <div data-role="popup" id="mensajeokagt" data-position="fixed">
+      <div data-role="header">
+        <h1>Agregar detalles de tarea</h1>
+      </div>
+      <div data-role="content">
+      <div data-role="popup" id="mensajeokagt" data-position="fixed">
         <div data-role="header" data-theme="a">
         <h2 id="titulookn">Nueva ubicacion</h2>
     	</div>
@@ -1702,10 +1706,6 @@ function agregarcom(idtarea,idusuario)
              </span>
     	</div>
     </div>
-      <div data-role="header">
-        <h1>Agregar detalles de tarea</h1>
-      </div>
-      <div data-role="content">
       <? 
 	  $aa="select * from suscmaterias where idusuario=$idusuario ORDER BY Nombremateria ASC";	
 	$bb=mysqli_query($con,$aa) or die ("error buscando ".$aa);
