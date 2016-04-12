@@ -374,18 +374,14 @@ var tareaasel=0;
 								//Cierra cualquier dialogo que este abierto al encontrar una notificacion
 								$('#dialogotarea').dialog();
 								$('#dialogootarea').dialog();
-								$('#dialogootarea').dialog();
 								$('#dialogotarea').dialog('close');
-								$('#dialogootarea').dialog('close');
 								$('#dialogootarea').dialog('close');
 								$('#notificacion2').popup('open');
 							} else
 							{
 								$('#dialogotarea').dialog();
 								$('#dialogootarea').dialog();
-								$('#dialogootarea').dialog();
 								$('#dialogotarea').dialog('close');
-								$('#dialogootarea').dialog('close');
 								$('#dialogootarea').dialog('close');
 								$('#notificacion2').popup('open');
 							}
@@ -1697,15 +1693,15 @@ function agregarcom(idtarea,idusuario)
         <h1>Agregar detalles de tarea</h1>
       </div>
       <div data-role="content">
-      <div data-role="popup" id="mensajeokagt" data-position="fixed">
-        <div data-role="header" data-theme="a">
-        <h2 id="titulookn">Nueva ubicacion</h2>
-    	</div>
-        <div data-role="content" data-theme="a">
-             <span id="mensajeokn">
-             </span>
-    	</div>
-    </div>
+      		 <div data-role="popup" id="mensajeokagt" data-position="fixed">
+                <div data-role="header" data-theme="a">
+                <h2 id="titulookn">Nueva ubicacion</h2>
+                </div>
+                <div data-role="content" data-theme="a">
+                     <span id="mensajeokn">
+                     </span>
+                </div>
+            </div>
       <? 
 	  $aa="select * from suscmaterias where idusuario=$idusuario ORDER BY Nombremateria ASC";	
 	$bb=mysqli_query($con,$aa) or die ("error buscando ".$aa);
