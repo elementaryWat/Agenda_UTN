@@ -90,7 +90,7 @@ $bb=mysqli_query($con,$aa) or die ("error buscando ".$aa);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,user-scalable=no"/>
 <link rel="stylesheet"  href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" /> 
-<title>Agenda UTN</title>
+<title>Prueba cambio</title>
 <link rel="stylesheet"  href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" /> 
 	<link rel="stylesheet" href="calendario/jquery.mobile.datepicker.css" />
 	<link rel="stylesheet" href="calendario/jquery.mobile.datepicker.theme.css" />
