@@ -405,6 +405,7 @@ var tareaasel=0;
 	}
 	function obtenertareas()
 	{
+		alert("Se obtendran las tareas");
 		if (tareasm==null)
 		{
 			tareasm="Personales";
