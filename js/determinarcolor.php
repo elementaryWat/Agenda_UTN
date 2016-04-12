@@ -30,7 +30,7 @@ mysqli_select_db($con,"u376876484_agen2") or die ("no se ha podido encontrar la 
 $consulr="";
 if ($Rango!="Todas")
 {
-	$consulr=" AND idmateria=".$Rango;
+	$consulr=" AND Materia=".$Rango;
 }
 $ab=" SELECT * FROM  `tareas` WHERE  `Fechaentrega` >=  '".$anio."-".$mes."-".$dia."' AND  `Fechaentrega` < '".$nuevafecha."'".$consulr.$consultacriterio;
 						$ba=mysqli_query($con,$ab) or die ("error buscando ".$ab);	
