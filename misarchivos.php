@@ -725,7 +725,7 @@ if ($boton=="Agregar archivo")
 	?>
 					 <script type="text/javascript">
 					 $(document).ready(function(e) {
-						 	alert('El tipo de archivo es <? echo $tipo;?>');
+						 	alert('El tipo de archivo es <? echo $tipo;?>. La cantidad de tipos coincidentes<? echo $canttipos;?>');
 						});
 					 </script> 
 					 <?
