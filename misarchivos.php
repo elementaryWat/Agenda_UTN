@@ -729,7 +729,7 @@ if ($boton=="Agregar archivo")
 	?>
 					 <script type="text/javascript">
 					 $(document).ready(function(e) {
-						 	alert('El tipo de archivo es <? echo $tipo;?>. La cantidad de tipos coincidentes<? echo $canttipos;?>');
+						 	alert('El tipo de archivo es <? echo $tipo;?>');
 						});
 					 </script> 
 					 <?
@@ -758,14 +758,8 @@ if ($boton=="Agregar archivo")
 				{
 					if ($canttipos==0)
 					{
-						$l=mysqli_query($con,$a) or die ("error insertando ".$a);
-						$ctip=mysqli_num_rows($l);
-						if ($ctip!=0)
-						{
-							//Si no existe el tipo archivo lo agrega en la lista de archivos a agregar
-							$a="insert into tiposaagregar(Desctipo,Fecha,Usuario) values ('$tipo','$fechaagre',$idusuario)";
+						$a="insert into tiposaagregar(Desctipo,Fecha,Usuario) values ('$tipo','$fechaagre',$idusuario)";
 							$l=mysqli_query($con,$a) or die ("error insertando ".$a);
-					
 					$Men='<p style="text-align:center; color:#F00">Este tipo de archivos no esta soportado actualmente. No te preocupes en la brevedad sera implementada una mejora</p>';
 					?>
 					 <script type="text/javascript">
