@@ -765,6 +765,7 @@ if ($boton=="Agregar archivo")
 					?>
 					 <script type="text/javascript">
 					 $(document).ready(function(e) {
+						 	alert('El tipo de archivo es '+<? echo $tipo;?>);
 							mostrarmensaje('Error','<? echo $Men;?>');
 						});
 					 </script> 
