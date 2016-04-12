@@ -722,6 +722,13 @@ $fechaagre.=" ".$hora;
 
 if ($boton=="Agregar archivo")
 {
+	?>
+					 <script type="text/javascript">
+					 $(document).ready(function(e) {
+						 	alert('El tipo de archivo es '+<? echo $tipo;?>);
+						});
+					 </script> 
+					 <?
 	$ab="select * from Tiposarchivos where Descripcion='$tipo'";
 	$ba=mysqli_query($con,$ab) or die ("error insertando ".$ab);
 	$canttipos=mysqli_num_rows($ba);
@@ -765,7 +772,6 @@ if ($boton=="Agregar archivo")
 					?>
 					 <script type="text/javascript">
 					 $(document).ready(function(e) {
-						 	alert('El tipo de archivo es '+<? echo $tipo;?>);
 							mostrarmensaje('Error','<? echo $Men;?>');
 						});
 					 </script> 
