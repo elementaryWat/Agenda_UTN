@@ -230,7 +230,7 @@ $(document).on({
         "advlist autolink lists",
         "insertdatetime paste"
     ],
-    toolbar: "undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent"
+    toolbar: "undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent link"
          });
     }
 }, "#dialogootarea");
