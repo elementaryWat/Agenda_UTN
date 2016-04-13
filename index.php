@@ -227,7 +227,7 @@ $(document).on({
             language : 'es',
             content_css: "css/content.css",
 			plugins: [
-        "advlist autolink lists",
+        "advlist autolink lists link",
         "insertdatetime paste"
     ],
     toolbar: "undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent link"
