@@ -84,6 +84,8 @@ switch($Criterio)
 $cadenaswow=$cadenacriterio.$cadenarango;
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 $fechahoy=date("Y-m-d");
+$hora=date("G:i:s");
+$fechahoy.=" ".$hora;
 
 $aa="select * from tareas where ($consultarango) $consultacriterio AND (Fechaentrega>='$fechahoy' OR Fechafin>='$fechahoy') ORDER BY Fechaentrega Asc";	
 $ba=mysqli_query($con,$aa) or die ("error buscando ".$aa);	
