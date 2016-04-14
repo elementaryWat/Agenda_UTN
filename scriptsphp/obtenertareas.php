@@ -204,7 +204,7 @@ $hora=date("G:i:s");
 $fechahoy.=" ".$hora;
 
 
-$aa="select * from tareas where ($consultarango) $consultacriterio AND (Fechaentrega>='$fechahoy' OR Fechafin>='$fechahoy') ORDER BY Fechaentrega Asc";	
+$aa="select * from tareas where ($consultarango) $consultacriterio AND (Fechaentrega>='$fechahoy') ORDER BY Fechaentrega Asc";	
 $bb=mysqli_query($con,$aa) or die ("error buscando ".$aa);	
 $canttareas=mysqli_num_rows($bb);
 $saltar="";
