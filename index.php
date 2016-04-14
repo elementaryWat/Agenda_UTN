@@ -109,7 +109,7 @@ $bb=mysqli_query($con,$aa) or die ("error buscando ".$aa);
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="calendario/external/jquery-ui/datepicker.js"></script>
 	<script src="calendario/jquery.mobile.datepicker.js"></script>
-     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script language="javascript" type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js"> </script>
      <link rel="stylesheet"  href="js/packiconos/dist/jqm-icon-pack-fa.css" />
     <script>
 	$(document).ready(function() {
