@@ -226,11 +226,15 @@ $(document).on({
 		   },
             language : 'es',
             content_css: "css/content.css",
-			plugins: [
-        "advlist autolink lists link",
-        "insertdatetime paste"
-    ],
-    toolbar: "undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent link"
+			 theme: 'modern',
+  plugins: [
+    'advlist autolink lists link image preview hr',
+    'searchreplace wordcount code fullscreen',
+    'insertdatetime media save contextmenu directionality',
+    'emoticons template paste textcolor colorpicker textpattern imagetools'
+  ],
+  		 toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+  	toolbar2: 'forecolor backcolor emoticons',
          });
     }
 }, "#dialogootarea");
