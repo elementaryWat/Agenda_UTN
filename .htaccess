@@ -1,5 +1,2 @@
 # Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
 RewriteBase /
-php_value upload_max_filesize 10M
-php_value post_max_size 20M
-php_value max_execution_time 120
