@@ -241,6 +241,32 @@ $(document).on({
          });
     }
 }, "#dialogootarea");
+$(document).on({
+    "pageshow": function () {
+		tinymce.init({
+            selector: "textarea#detailss",
+			setup : function(ed) {
+			  ed.on('keyup', function(e) {
+				  desaparecermensajedeerror('errordetailsmod');
+			  });
+		   },
+            language : 'es',
+			  content_css: [
+				'//fast.fonts.net/cssapi/e6dc9b99-64fe-4292-ad98-6974f93cd2a2.css',
+				'//www.tinymce.com/css/codepen.min.css'
+			  ],
+			 theme: 'modern',
+  plugins: [
+    'advlist autolink lists link image preview hr',
+    'searchreplace wordcount code fullscreen',
+    'insertdatetime media save contextmenu directionality',
+    'emoticons template paste textcolor colorpicker textpattern imagetools'
+  ],
+  		 toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+  	toolbar2: 'forecolor backcolor emoticons',
+         });
+    }
+}, "#dialogotarea");
 /*
 $(document).on({
     "pageshow": function () {
