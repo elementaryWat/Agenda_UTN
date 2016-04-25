@@ -17,7 +17,7 @@ function calculardiferenciafecha($fInicio,$fFinal)
 	$fechaInicio = strtotime($fInicio);
 	$fechaFinal = strtotime($fFinal);
 	$segundos = ($fechaFinal - $fechaInicio);
-	$dias = round($segundos/86400);
+	$dias = floor($segundos/86400);
 	$meses = floor($segundos/2592000);
 	$segundosRestante = ($segundos)%(2592000);
 	$semanas = round($segundosRestante/604800);
@@ -83,7 +83,7 @@ function deferenciadedias($fIni,$fFin)
 	$fechaI = strtotime($fIni);
 	$fechaF = strtotime($fFin);
 	$segundos = ($fechaF - $fechaI);
-	$dias = round($segundos/86400);
+	$dias = floor($segundos/86400);
 	return $dias;
 }
 $Tipocom=$_GET['Tipocom'];

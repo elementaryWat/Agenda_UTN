@@ -6,7 +6,7 @@ function deferenciadedias($fIni,$fFin)
 	$fechaI = strtotime($fIni);
 	$fechaF = strtotime($fFin);
 	$segundos = ($fechaF - $fechaI);
-	$dias = round($segundos/86400);
+	$dias = floor($segundos/86400);
 	return $dias;
 }
 function obtenerdiferenciat($fInicio,$fFinal)
@@ -155,7 +155,7 @@ function calculardiferenciafecha($fInicio,$fFinal)
 	$fechaInicio = strtotime($fInicio);
 	$fechaFinal = strtotime($fFinal);
 	$segundos = ($fechaFinal - $fechaInicio);
-	$dias = round($segundos/86400);
+	$dias = floor($segundos/86400);
 	if ($dias==0)
 	{
 		$cadenadia="Hoy";
