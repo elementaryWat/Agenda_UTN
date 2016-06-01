@@ -58,7 +58,7 @@ if ($Tiposhare=="Compartida")
 $con=mysqli_connect("mysql.hostinger.com.ar","u631612768_agend","utniano");
 mysqli_select_db($con,"u631612768_agend") or die ("no se ha podido encontrar la base de datos");
 */
-$aa="insert into tareas (Usuarioagre,Fechaagre,Modsino,Lastusmod,Lastdatmod,Materia,Nombre,Detalles,Tipofecha,Fechaentrega,Fechafin,Tipo,Comision,Compartida) values ($Usuarioagre,'$fechaagre',0,$Usuarioagre,'$fechaagre',$Materia,'$Nombre','$Detalles','$Tipofecha','$Fechaini','$Fechafin','$Tipo',$Comision,'$Compartida')";	
+$aa="insert into tareas (Usuarioagre,Fechaagre,Modsino,Lastusmod,Lastdatmod,Materia,Nombre,Detalles,Tipofecha,Fechaentrega,Fechafin,Tipo,Comision,Compartido) values ($Usuarioagre,'$fechaagre',0,$Usuarioagre,'$fechaagre',$Materia,'$Nombre','$Detalles','$Tipofecha','$Fechaini','$Fechafin','$Tipo',$Comision,'$Compartida')";	
 $bb=mysqli_query($con,$aa) or die ("error buscando ".$aa);
 //Obtiene el id de la tarea recien agregada
 $aa="select * from tareas ORDER BY idtarea DESC LIMIT 1";	
