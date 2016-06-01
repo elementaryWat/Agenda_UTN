@@ -1746,7 +1746,7 @@ function agregarcom(idtarea,idusuario)
         <label><span id="detalless">Detalles</span><textarea name="detalles" id="detalles" style="position: relative; z-index: 100000;"></textarea></label>
         <span id="errordetalles"></span>
         <fieldset data-role="controlgroup">
-        <label><input name="tiposhare" id="shcompart" type="radio" value="Compartida" />Compartida</label>
+        <label><input name="tiposhare" id="shcompart" type="radio" value="Compartida" checked="checked"/>Compartida</label>
          <label><input name="tiposhare" id="shperso" type="radio" value="Personal"/>Personal</label>
         </fieldset>
         <span id="fechas">Fecha de entrega</span>
