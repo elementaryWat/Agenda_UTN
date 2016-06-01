@@ -589,6 +589,7 @@ var tareaasel=0;
 		Anio=
 		Comision*/
 		var tipofecha=$("input[name=tipofecha]:checked").val();
+		var tipocomp=$("input[name=tiposhare]:checked").val();
 		var fecha=$("#fecha").val();
 		var fechaini=$("#fechaini").val();
 		var fechafin=$("#fechafin").val();
@@ -606,7 +607,7 @@ var tareaasel=0;
 		 fechaini=encodeURIComponent(fechaini);
 		 fechafin=encodeURIComponent(fechafin);
 		 dialogomensaje=$("#mensajeokn");
-		 direccion="scriptsphp/agregartarea.php?Nombre="+nombre+"&Tipo="+tipota+"&Materia="+materia+"&Detalles="+detalles+"&Usuarioagre="+Usuario+"&Tipofecha="+tipofecha+"&Fechaunica="+fecha+"&Fechainicio="+fechaini+"&Fechafinal="+fechafin+"&Hora="+hora+"&Minuto="+minuto;
+		 direccion="scriptsphp/agregartarea.php?Nombre="+nombre+"&Tipo="+tipota+"&Materia="+materia+"&Detalles="+detalles+"&Usuarioagre="+Usuario+"&Tipofecha="+tipofecha+"&Fechaunica="+fecha+"&Fechainicio="+fechaini+"&Fechafinal="+fechafin+"&Hora="+hora+"&Minuto="+minuto+"&Compartida="+tipocomp;
 		if (cantidaderr>0)
 		{
 			aparecermensajedeerror("mensajeokn","<p>Corrija los errores para poder continuar</p>");
@@ -1744,6 +1745,10 @@ function agregarcom(idtarea,idusuario)
          <span id="errortipo"></span>
         <label><span id="detalless">Detalles</span><textarea name="detalles" id="detalles" style="position: relative; z-index: 100000;"></textarea></label>
         <span id="errordetalles"></span>
+        <fieldset data-role="controlgroup">
+        <label><input name="tiposhare" id="shcompart" type="radio" value="Compartida" />Compartida</label>
+         <label><input name="tiposhare" id="shperso" type="radio" value="Personal"/>Personal</label>
+        </fieldset>
         <span id="fechas">Fecha de entrega</span>
         <fieldset data-role="controlgroup">
         <label><input name="tipofecha" id="tipofecha" type="radio" value="esp" onchange="mostrarinpfecha(this.value)"/>Fecha especifica</label>

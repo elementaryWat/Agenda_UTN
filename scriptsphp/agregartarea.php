@@ -11,6 +11,7 @@ $Nombre=$_GET['Nombre'];
 $Tipo=$_GET['Tipo'];
 $Materia=$_GET['Materia'];
 $Detalles=$_GET['Detalles'];
+$Tiposhare=$_GET['Compartida'];
 $Tipofecha=$_GET['Tipofecha'];
 $Fechaunica=$_GET['Fechaunica'];
 $Fechaunica=substr($Fechaunica,6,4)."-".substr($Fechaunica,3,2)."-".substr($Fechaunica,0,2);
@@ -44,20 +45,32 @@ $ac="select * from suscmaterias where idusuario=$Usuarioagre AND idmateria=$Mate
 $ca=mysqli_query($con,$ac) or die ("error buscando ".$ac);
 $mcom=mysqli_fetch_array($ca);
 $Comision=$mcom['comisioncursado'];
+$Compartir=false;
+if ($Tiposhare=="Compartida")
+{
+	$Compartir=true;
+	$Compartida="SI";
+} else if ($Tiposhare=="Personal")
+{
+	$Compartida="NO";
+}
 /*
 $con=mysqli_connect("mysql.hostinger.com.ar","u631612768_agend","utniano");
 mysqli_select_db($con,"u631612768_agend") or die ("no se ha podido encontrar la base de datos");
 */
-$aa="insert into tareas (Usuarioagre,Fechaagre,Modsino,Lastusmod,Lastdatmod,Materia,Nombre,Detalles,Tipofecha,Fechaentrega,Fechafin,Tipo,Comision) values ($Usuarioagre,'$fechaagre',0,$Usuarioagre,'$fechaagre',$Materia,'$Nombre','$Detalles','$Tipofecha','$Fechaini','$Fechafin','$Tipo',$Comision)";	
+$aa="insert into tareas (Usuarioagre,Fechaagre,Modsino,Lastusmod,Lastdatmod,Materia,Nombre,Detalles,Tipofecha,Fechaentrega,Fechafin,Tipo,Comision,Compartida) values ($Usuarioagre,'$fechaagre',0,$Usuarioagre,'$fechaagre',$Materia,'$Nombre','$Detalles','$Tipofecha','$Fechaini','$Fechafin','$Tipo',$Comision,'$Compartida')";	
 $bb=mysqli_query($con,$aa) or die ("error buscando ".$aa);
 //Obtiene el id de la tarea recien agregada
 $aa="select * from tareas ORDER BY idtarea DESC LIMIT 1";	
 $bb=mysqli_query($con,$aa) or die ("error buscando ".$aa);
 $mrec=mysqli_fetch_array($bb);
 $idrecagre=$mrec['idtarea'];
-$aa="insert into notificaciones (Tipo,Recursosino,idusuario,idtarea,idmateria,Comision,Fechanot) values ('INS','NO',$Usuarioagre,
+if ($Compartir)
+{
+	$aa="insert into notificaciones (Tipo,Recursosino,idusuario,idtarea,idmateria,Comision,Fechanot) values ('INS','NO',$Usuarioagre,
 $idrecagre,$Materia,$Comision,'$fechaagre')";	
-$bb=mysqli_query($con,$aa) or die ("error buscando ".$aa);
+	$bb=mysqli_query($con,$aa) or die ("error buscando ".$aa);
+}
 echo 'Se ha insertado la tarea de forma correcta';
 ?>
 
