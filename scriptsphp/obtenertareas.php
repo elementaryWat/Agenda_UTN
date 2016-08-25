@@ -153,7 +153,7 @@ switch($Rango)
 	/*
 	Obtiene la comision en la que esta cursando la mteria seleccionada
 	*/
-	$ac="select * from suscmaterias where idmateria=$Rango";	
+	$ac="select * from suscmaterias where idmateria=$Rango AND idusuario=$Usuario";	
 	$ca=mysqli_query($con,$ac) or die ("error buscando ".$ac);
 	$msum=mysqli_fetch_array($ca);
 	$comisioncursadomat=$msum['comisioncursado'];
