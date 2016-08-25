@@ -56,7 +56,7 @@ switch($Rango)
 		$cadenabusqmat="";
 		break;
 	default:
-	$ab="select * from materias where idmateria=$Rango";	
+	$ab="select * from materias where idmateria=$Rango AND idusuario=$Usuario";	
 	$ba=mysqli_query($con,$ab) or die ("error buscando ".$ab);	
     $mp=mysqli_fetch_array($ba);
 	$Nombremateria=$mp['Abrevmateria'];
